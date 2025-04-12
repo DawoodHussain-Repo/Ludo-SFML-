@@ -1,0 +1,34 @@
+How to Run Ludo Game Project (Linux)
+This guide provides detailed steps to run the Ludo game project on a Linux system.
+
+Prerequisites
+Compiler: Ensure you have a C++ compiler installed. GCC is recommended.
+Install GCC using the following command:
+
+sudo apt update
+sudo apt install g++
+SFML Library: The project uses SFML for rendering.
+Install SFML using the following command:
+
+sudo apt install libsfml-dev
+Pthread Library: The project uses multithreading, so ensure pthread is installed (it’s usually included by default).
+To confirm, run:
+
+sudo apt install pthread
+Steps to Compile and Run the Project
+Navigate to the Project Directory
+Open a terminal and navigate to the directory containing Ludo.cpp.
+Example:
+
+cd /path/to/your/project
+Compile the Code
+Use the following command to compile the code:
+
+g++ -o ludo_game Ludo.cpp -lsfml-graphics -lsfml-window -lsfml-system -pthread
+-o ludo_game: Specifies the output executable name as ludo_game.
+-lsfml-graphics -lsfml-window -lsfml-system: Links the required SFML libraries.
+-pthread: Links the threading library.
+Run the Game
+After successful compilation, run the game using the following command:
+
+./ludo_game
